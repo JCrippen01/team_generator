@@ -17,13 +17,25 @@ window.onload = () => {
         const animals = [...data.animals];   // Copy animals array
         const teams = [[], [], [], []];      // Initialize 4 empty teams
 
-       
+        // Iterate thru array and assign students to nested array
+        for( elem of teams) {
+          
+          // Condition for elem length and students length
+          while( elem.length < 4 && students.length > 0){
+            const randomIndex = Math.floor(Math.random() * students.length);
+            const randomStudent = students.splice(randomIndex, 1)[0]; // Remove a student
+            elem.push(randomStudent); // Add the student to the team
+          }
+          
+        }
+
+        /*
         while (students.length > 0) {
           const randomIndex = Math.floor(Math.random() * students.length);
           const randomStudent = students.splice(randomIndex, 1)[0]; // Remove a student
           const teamIndex = Math.floor(Math.random() * 4); // Random team index
           teams[teamIndex].push(randomStudent); // Add the student to the team
-        }
+        }*/
 
         // Assign a random animal name to each team
         const teamNames = teams.map(() => {
