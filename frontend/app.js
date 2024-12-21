@@ -1,5 +1,5 @@
 window.onload = () => {
-  const baseUrl = "http://127.0.0.1:8000"; // URL of the Flask back-end
+  const baseUrl = "18.119.142.108:8000"; // URL of the Flask back-end
 
   // Function to generate 4 teams with random animal names
   async function generateTeams() {

@@ -13,6 +13,12 @@ h1 {
   text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
 }
 
+#output {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 #container1 {
   display: flex;
   justify-content: center;
@@ -24,10 +30,16 @@ button {
   background-color: chartreuse;
   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
-  text-align: center;
 }
-/* 
-#output {
-  border: solid 5px;
-  height: 200px;
-} */
+
+h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
