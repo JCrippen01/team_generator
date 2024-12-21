@@ -1,41 +1,31 @@
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
+  background-image: url(https://png.pngtree.com/thumb_back/fw800/background/20230904/pngtree-people-grouped-together-in-a-team-image_13218349.jpg);
+  background-repeat: no-repeat;
+  background-size: 200% ;
 }
 
-header {
-  background-color: #a08383;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
+h1 {
+  display: flex;
+  justify-content: center;
+  font-family: fantasy;
+  color:cyan;
+  text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
 }
 
-main {
-  padding: 20px;
+#container1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 button {
-  background-color: #879e88;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
+  color: blue;
+  background-color: chartreuse;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
 }
 
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-  margin-top: 10px;
+#container2 {
+  border: solid 5px;
+  height: 200px;
 }
-
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
-
