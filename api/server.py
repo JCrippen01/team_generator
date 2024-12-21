@@ -13,32 +13,26 @@ def index():
     return json.dumps({'msg': "success"})
 
 @app.route('/all')
-def all_users():
+def all_users_and_animals():
     with psycopg2.connect(
     host=HOST,
     port=PORT,  # whatever port postgres is running on
     database="teams",
     user="postgres",
     password="password") as conn:
+        #Fetch Students
         with conn.cursor() as cursor:
             cursor.execute("select * from Students")
-            teams = cursor.fetchall()
+            students = cursor.fetchall()
+        #Fetch animals
+            cursor.execute("SELECT * from Animals")
+            animals = cursor.fetchall()
     conn.close()
-    return json.dumps({'teams': teams if teams else "No one's home..."})
+    return json.dumps({
+        'students': students if students else [],
+        'animals': animals if animals else [],
+    })
 
-# @app.route('/<id>')
-# def single_user(id):
-#     with psycopg2.connect(
-#     host=HOST,
-#     port=PORT,   # whatever port postgres is running on
-#     database="people",
-#     user="postgres",
-#     password="password") as conn:
-#         with conn.cursor() as cursor:
-#             cursor.execute("select * from Person where id = (%s)", (id,))
-#             person = cursor.fetchone()
-#     conn.close()
-#     return json.dumps({'person': person if person else "That person doesn't exist"})
 
 
 app.run(host='0.0.0.0', port=8000, debug=True)
