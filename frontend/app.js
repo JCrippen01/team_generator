@@ -18,7 +18,13 @@ window.onload = () => {
     } catch (error) {
       console.error('Error fetching team names:', error);
       outputDiv.textContent = 'Failed to fetch team names. Please try again.';
+      console.log("yippie")
     }
   }
+  document.getElementById('Generator').addEventListener(`click`, generateTeamName);
 }
-document.getElementById('generate-team').addEventListener(`click`, generateTeamName);
+
+// const btn = document.querySelector("button")
+// btn.addEventListener("click", (e) => {
+//   console.log(e.target)
+// })
